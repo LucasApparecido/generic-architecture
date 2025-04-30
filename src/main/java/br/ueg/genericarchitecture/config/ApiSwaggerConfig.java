@@ -16,8 +16,8 @@ public class ApiSwaggerConfig {
     @Bean
     public OpenAPI openAPI() {
         return new OpenAPI().addSecurityItem(new SecurityRequirement().
-                        addList("Bearer Authentication"))
+                        addList("Bearer_Authentication"))
                 .components(new Components().addSecuritySchemes
-                        ("Bearer Authentication", createAPIKeyScheme()));
+                        ("Bearer_Authentication", createAPIKeyScheme()));
     }
 }
